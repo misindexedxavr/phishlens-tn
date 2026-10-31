@@ -1,0 +1,8 @@
+# Sample input for: python cli.py batch urls.txt
+# One URL per line. Blank lines and lines starting with # are ignored.
+# Only safe, reserved example domains are listed here. Replace them with your own list.
+https://example.com
+https://www.example.org/login
+http://example.net/account/verify
+https://secure.example.com/update-your-card
+https://example.com/redirect?to=https://example.org

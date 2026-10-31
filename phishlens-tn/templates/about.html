@@ -1,0 +1,39 @@
+{% extends "base.html" %}
+{% block title %}How scoring works | PhishLens TN{% endblock %}
+{% block content %}
+<article class="prose">
+  <h1>How scoring works</h1>
+  <p>Every analysis runs a set of small, documented rules. Each rule that fires adds its weight to the score (or subtracts it, for mitigations). The total is clamped between 0 and 100 and mapped to a level.</p>
+  <ul class="level-list">
+    {% for name, minimum in levels %}<li><strong>{{ name }}</strong> from {{ minimum }}</li>{% endfor %}
+  </ul>
+  <p>A clean result is not proof of safety, and a high score is not proof of fraud. Treat PhishLens as a second opinion and confirm through your bank or operator's official channel.</p>
+
+  <h2>What PhishLens never does</h2>
+  <ul>
+    <li>It never executes JavaScript or renders the page.</li>
+    <li>It never submits a form or follows a form action.</li>
+    <li>It never stores credentials. Analysis results live only in your browser unless you export them.</li>
+    <li>It refuses private, loopback and link-local addresses, including after every redirect.</li>
+  </ul>
+
+  <h2>All rules</h2>
+  <div class="table-wrap">
+    <table>
+      <caption class="visually-hidden">Scoring rules, sorted by weight</caption>
+      <thead><tr><th scope="col">Weight</th><th scope="col">Rule</th><th scope="col">Category</th><th scope="col">What it detects</th></tr></thead>
+      <tbody>
+      {% for r in rules %}
+        <tr>
+          <td class="num">{{ '%+d' % r.weight }}</td>
+          <th scope="row">{{ r.title }}</th>
+          <td>{{ r.category }}</td>
+          <td>{{ r.description }}</td>
+        </tr>
+      {% endfor %}
+      </tbody>
+    </table>
+  </div>
+  <p><a class="btn" href="{{ url_for('index') }}">Back to the analyzer</a></p>
+</article>
+{% endblock %}
