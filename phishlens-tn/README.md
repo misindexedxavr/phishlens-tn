@@ -22,19 +22,6 @@ PhishLens TN is a phishing page analyzer tuned for Tunisian brands: banks (BIAT,
 - **Batch CLI.** Reads a file of URLs and writes JSON, CSV and a Markdown summary (top targeted brands, most common tricks, average score).
 - **Privacy by design.** Credentials are never stored, forms are never submitted, form actions are never followed, results stay in your browser unless you export them.
 
-## Screenshots
-
-> Placeholders: add your own captures with these file names.
-
-| | |
-| --- | --- |
-| ![Home](docs/screenshots/home.png) | ![Critical result with gauge](docs/screenshots/result-critical.png) |
-| `docs/screenshots/home.png` | `docs/screenshots/result-critical.png` |
-| ![Forms tab](docs/screenshots/tab-forms.png) | ![Light theme](docs/screenshots/light-theme.png) |
-| `docs/screenshots/tab-forms.png` | `docs/screenshots/light-theme.png` |
-| ![Batch summary](docs/screenshots/batch-summary.png) | |
-| `docs/screenshots/batch-summary.png` | |
-
 ## How it works
 
 ```mermaid
