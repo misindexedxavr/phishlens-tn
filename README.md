@@ -44,7 +44,7 @@ The same pipeline (`analyzer/pipeline.py`) feeds the web UI (as a streamed seque
 Requirements: Python 3.11 or newer.
 
 ```bash
-git clone <your-repository-url> phishlens-tn
+git clone https://github.com/holyxav/phishlens-tn.git
 cd phishlens-tn
 python -m venv .venv
 source .venv/bin/activate          # Windows: .venv\Scripts\activate
